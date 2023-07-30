@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--con esto tenemos uso de vue
-    pero para hacer uso de el ay que crear una instancia vue-->
     <title>GitHub search</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--con esto tenemos uso de vue
+        pero para hacer uso de el ay que crear una instancia vue-->
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
         <!-- Content -->
         <article class="content">
-            <h1 class="content__title">Search GitHub users</h1>
+            <h1 class="content__title">{{message}}</h1>
 
             <!-- Search -->
             <form class="search">
@@ -33,6 +33,9 @@
         </article>
     </div>
     <script src="js/main.js"></script>
+    <script>
+        const mountedApp = App.mount("#app")
+    </script>
 </body>
 
 </html>
