@@ -1,4 +1,6 @@
 const API = "https://api.github.com/users/";
+
+
 // crea una instancia vue
 const App = Vue.createApp({
     data(){
@@ -13,5 +15,5 @@ const App = Vue.createApp({
             const data = await response.json()
             console.log(data);
         }
-    }
+    },
 })
