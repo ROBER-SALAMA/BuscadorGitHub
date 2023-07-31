@@ -5,13 +5,13 @@ const API = "https://api.github.com/users/";
 const App = Vue.createApp({
     data(){
         return{
-            message: "hello vue"
+            search: null
         };
     },
     //metodo para hacer la busqueda
     methods:{
         async doSearch (){
-            const response = await fetch (API + 'ROBER-SALAMA') //hacemos uso de la API + nombre de usuario
+            const response = await fetch (API + this.search) //hacemos uso de la API + el modelo search
             const data = await response.json()
             console.log(data);
         }
