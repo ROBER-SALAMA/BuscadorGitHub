@@ -24,6 +24,7 @@
             <!-- Search -->
             <!-- v-on:submit.prevent="doSearch" conectamos el for a la funcion doSearch que esta en methods -->
             <form class="search" v-on:submit.prevent="doSearch">
+                <!-- v-model="search" conecta el input con el modelo search -->
                 <input v-model="search" type="text" class="search__input" required placeholder="Search GitHub users">
                 <input type="submit" class="search__submit" value="Search">
             </form>
