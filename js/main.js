@@ -5,6 +5,7 @@ const API = "https://api.github.com/users/";
 const App = Vue.createApp({
     data(){
         return{
+            // modelo search
             search: null
         };
     },
