@@ -6,7 +6,9 @@ const App = Vue.createApp({
     data(){
         return{
             // modelo search
-            search: null
+            search: null,
+            // modelo result
+            result: null
         };
     },
     //metodo para hacer la busqueda
@@ -15,6 +17,8 @@ const App = Vue.createApp({
             const response = await fetch (API + this.search) //hacemos uso de la API + el modelo search
             const data = await response.json()
             console.log(data);
+            // si se busca algo dejara de ser nulo y lo mostrara
+            this.result = true
         }
     },
 })
