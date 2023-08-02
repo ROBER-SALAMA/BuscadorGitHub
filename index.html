@@ -39,10 +39,11 @@
                     <a href="https://github.com/ROBER-SALAMA?tab=repositories" class="result__blog">https://github.com/ROBER-SALAMA?tab=repositories</a>
                 </p>
                     <br>
-                    
+
             </div>
+            <!-- <p v-else>✍✍✍</p> -->
             <!-- Error -->
-            <div class="result__error"></div>
+            <div v-if="error" class="result__error">NOT FOUND USER</div>
         </article>
     </div>
     <script src="js/main.js"></script>
