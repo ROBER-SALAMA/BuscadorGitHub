@@ -24,8 +24,8 @@ const App = Vue.createApp({
                 if(!response.ok) throw new Error("User not fout")
                 const data = await response.json()
                 console.log(data);
-                // si se busca algo dejara de ser nulo y lo mostrara
-                this.result = true
+                // muestra la info del resultado
+                this.result = data
             } catch (error) {
                 // el this.error es la propieddd del modelo, y el "error" es lo que le vamos
                 // a asignar dentro si sucede algo dentro del bloque try
