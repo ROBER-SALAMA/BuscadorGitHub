@@ -2,7 +2,7 @@ const API = "https://api.github.com/users/";
 
 
 // crea una instancia vue
-const App = Vue.createApp({
+const app = Vue.createApp({
     data() {
         return {
             // modelo search
@@ -10,7 +10,9 @@ const App = Vue.createApp({
             // modelo result
             result: null,
             // modelo error
-            error: null
+            error: null,
+            // modelo favorites
+            favorites: new Map()
         };
     },
     //metodo para hacer la busqueda
@@ -34,6 +36,15 @@ const App = Vue.createApp({
                 // si se busca algo y todo sale bien se limpia la caja de busqueda
                 this.search = null
             }
+        },
+
+        // metodo para añadir a favoritos
+        addFavorite() {
+            this.favorites.set(this.result.id, this.result);
+            console.log(this.favorites);
         }
-    },
+        
+    }
 })
+
+const mountedApp = app.mount("#app")
