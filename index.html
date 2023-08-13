@@ -31,6 +31,7 @@
 
             <!-- Result -->
             <div class="result" v-if="result">
+                <a href="#" class="result__toggle-favorite" @click="addFavorite">Add Favorite ⭐️</a>
             <!-- {{ result.name }} trae el nombre hacia la targeta -->
                 <h2 class="result__name">{{ result.name }}</h2>
                 <!-- v-bind:src="result.avatar_url" mostrara la img en la card-->
@@ -46,9 +47,9 @@
         </article>
     </div>
     <script src="js/main.js"></script>
-    <script>
+    <!-- <script>
         const mountedApp = App.mount("#app")
-    </script>
-</body>
+    </script> -->
+</body> 
 
 </html>
